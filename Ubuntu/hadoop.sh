@@ -9,8 +9,8 @@ function hadoop_install(){
     ssh-keygen -b 2048 -t rsa -f ~/.ssh/id_rsa -q -N '' -P ""
     touch ~/.ssh/authorized_keys
     cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-    echo 'Host * \n\
-              StrictHostKeyChecking no \n\
+    echo -e 'Host * \n
+              StrictHostKeyChecking no \n
               UserKnownHostsFile=/dev/null' > ~/.ssh/config
     mkdir -p /data/hdfs/namenode
     mkdir -p /data/hdfs/datanode
