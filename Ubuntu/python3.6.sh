@@ -20,7 +20,6 @@ function py3_install(){
                 cd /usr/src/Python-3.6.1 && sudo make altinstall
                 sudo apt-get install -y python-pip python3-pip
             fi
-        fi
 }
 
 py3_install
